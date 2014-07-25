@@ -8,6 +8,6 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<import resource="../database/Hibernate.xml"/>
  
 	<!-- Beans Declaration -->
-	<import resource="../spring/Stock.xml"/>
+	<import resource="../spring/Menu.xml"/>
  
 </beans>

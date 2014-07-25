@@ -1,15 +1,16 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
  
 <bean 
 class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 	<property name="location">
-		<value>properties/database.properties</value>
+		<value>WEB-INF/classes/resources/properties/database.properties</value>
 	</property>
 </bean>
- 
+
 <bean id="dataSource" 
          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	<property name="driverClassName" value="${jdbc.driverClassName}" />

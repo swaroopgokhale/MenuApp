@@ -1,16 +1,26 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+ 
+ <context:component-scan base-package="com.psl.rest" />
  
     <!-- Stock business object -->
-   <bean id="stockBo" class="com.psl.bo.serviceimpl.MenuServiceImpl" >
-   		<property name="stockDao" ref="stockDao" />
+   <bean id="menuBo" class="com.psl.bo.serviceImpl.MenuServiceImpl" >
+   		<property name="menuServiceDao" ref="menuDao" />
    </bean>
  
    <!-- Stock Data Access Object -->
-   <bean id="stockDao" class="com.psl.dao.serviceImpl.MenuServiceDaoImpl" >
+   <bean id="menuDao" class="com.psl.dao.serviceImpl.MenuServiceDaoImpl" >
    		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+      <bean id="restMenuService" class="com.psl.rest.RestMenuService" >
+   		<property name="menuService" ref="menuBo"></property>
    </bean>
  
 </beans>

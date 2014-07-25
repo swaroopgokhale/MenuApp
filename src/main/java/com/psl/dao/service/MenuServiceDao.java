@@ -8,7 +8,7 @@ public interface MenuServiceDao {
 	
 	Menu getMenu(String name);
 	List<Menu> getMenuList();
-	void updateMenu(Menu menu);
-	void deleteMenu(Menu menu);
+	void addMenu(Menu menu);
+	void deleteMenu(long menuId);
 
 }

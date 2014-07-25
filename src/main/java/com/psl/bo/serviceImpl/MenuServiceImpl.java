@@ -29,13 +29,13 @@ public class MenuServiceImpl implements MenuService {
 		return menuServiceDao.getMenuList();
 	}
 
-	public void updateMenu(Menu menu) {
-		menuServiceDao.updateMenu(menu);
+	public void addMenu(Menu menu) {
+		menuServiceDao.addMenu(menu);
 		
 	}
 
-	public void deleteMenu(Menu menu) {
-		menuServiceDao.deleteMenu(menu);
+	public void deleteMenu(long menuId) {
+		menuServiceDao.deleteMenu(menuId);
 		
 	}
 

@@ -13,7 +13,7 @@
 			<column name="NAME" length="100"  not-null="true" unique="true" />
 		</property>
 
-		<property name="categoty" type="string">
+		<property name="category" type="string">
 			<column name="CATEGORY" length="100"  not-null="true" unique="true" />
 		</property>
 
